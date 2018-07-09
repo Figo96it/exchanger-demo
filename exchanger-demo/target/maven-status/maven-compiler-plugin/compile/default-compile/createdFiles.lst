@@ -1,0 +1,12 @@
+pl\sda\exchangerdemo\controller\ExchangeViewController.class
+pl\sda\exchangerdemo\model\CurrencyTable.class
+pl\sda\exchangerdemo\model\Status.class
+pl\sda\exchangerdemo\controller\ExchangeController.class
+pl\sda\exchangerdemo\exchanger\Currency.class
+pl\sda\exchangerdemo\model\NbpExchangeRateResult.class
+pl\sda\exchangerdemo\exchanger\InitApp.class
+pl\sda\exchangerdemo\exchanger\NbpExchangerRateDownloader.class
+pl\sda\exchangerdemo\service\CurrencyExchangeService.class
+pl\sda\exchangerdemo\model\ExchangeResult.class
+pl\sda\exchangerdemo\ExchangerDemoApplication.class
+pl\sda\exchangerdemo\model\Rates.class

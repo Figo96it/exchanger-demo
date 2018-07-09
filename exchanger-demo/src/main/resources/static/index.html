@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tytul</title>
+    <link href="/webjars/bootstrap/4.1.1/css/bootstrap-grid-jsf.css" rel ="stylesheet">
+    <script src="/webjars/jquery/3.3.1-1/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+
+    <div id="resultDiv" class="alert alert-secondary" role="alert">
+
+    </div>
+    <input type="text" class="form-control" id="valueDiv">
+    <input type="date" class="form-control" id="effectiveDate">
+    <button type="button" class="btn btn-dark" id="superButton">Przelicz mnie na EURO</button>
+</div>
+</body>
+</html>
+
+<script>
+    $('#superButton').click(function () {
+        var val = $('#valueDiv').val();
+        var date = $('#effectiveDate').val();
+        alert(val);
+        $.ajax({
+            type:"GET",
+            url:"exchange/"+val+"/"+date ,
+            success: function (result) {
+                $('#resultDiv').append("<p>" +result.calculatedAmount +"</p>")
+            },
+            error:function (result) {
+                console.log(result);
+                alert(result.responseText);
+            }
+        })
+    });
+</script>
